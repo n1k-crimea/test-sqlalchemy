@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+</head>
+<body>
+<form action="/add_message" method="post">
+    <input name="text" type="text">
+    <input name="tag" type="text">
+    <button type="submit">ОК</button>
+</form>
+{% for message in messages%}
+<div>{{ message.text }} : <i>{{ message.tag }}</i></div>
+{% endfor %}
+</body>
+</html>
