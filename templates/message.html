@@ -11,7 +11,7 @@
     <button type="submit">ОК</button>
 </form>
 {% for message in messages%}
-<div>{{ message.text }} : <i>{{ message.tag }}</i></div>
+<div>{{ message.text }} : {%for tag in message.tags%}<i>{{ tag.text }}</i>{% endfor %}</div>
 {% endfor %}
 </body>
 </html>
